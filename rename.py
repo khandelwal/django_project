@@ -4,10 +4,10 @@ import sys
 import os
 from random import choice
 
-#def generate_secret_key():
+def generate_secret_key():
 #	""" Generate a SECRET_KEY for the settings file. This method is apparently from the 
 #	Django source. """
-#	return ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'))
+	return ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)') for i in range(50)])
 
 if __name__ == '__main__':
 	DEFAULT_PROJECT_NAME = 'myproject'
@@ -25,7 +25,7 @@ if __name__ == '__main__':
 	#generate a new unique, secret key
 	new_secret_key = generate_secret_key()
 
-	f = open(os.path.join(DEFAULT_PROJECT_NAME, 'local_settings.py'), 'a')
+	f = open(os.path.join(new_django_name, 'local_settings.py'), 'a')
 
 	#set the new secret key
 	f.write("SECRET_KEY='%s'\n" % new_secret_key)
