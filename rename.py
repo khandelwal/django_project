@@ -4,14 +4,12 @@ import sys
 import os
 from random import choice
 
-
-def generate_secret_key():
-	""" Generate a SECRET_KEY for the settings file. This method is apparently from the 
-	Django source. """
-	return ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)')
+#def generate_secret_key():
+#	""" Generate a SECRET_KEY for the settings file. This method is apparently from the 
+#	Django source. """
+#	return ''.join([choice('abcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(-_=+)'))
 
 if __name__ == '__main__':
-
 	DEFAULT_PROJECT_NAME = 'myproject'
 
 	if len(sys.argv) < 2:
