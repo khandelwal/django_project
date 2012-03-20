@@ -174,5 +174,7 @@ LOGGING = {
 
 try:
 	from local_settings import *
+	MIDDLEWARE_CLASSES += MIDDLEWARE_CLASSES_OVERRIDE
+	INSTALLED_APPS += INSTALLED_APPS_OVERRIDE
 except ImportError:
 	pass
